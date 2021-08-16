@@ -110,7 +110,7 @@ print('... computing ...')
 tavok = []
 n = starter_y
 while not n <= ymin_x[0]:
-    n -= 1
+    n -= 0.1
     for i in range(len(lista_tákolmány)):
         for j in range(len(y_ok_int)):
             x1 = lista_tákolmány[i]
@@ -136,7 +136,7 @@ x = fine_ertekek.index(min(fine_ertekek))
 P_k_x = []
 n1 = starter_y
 while not n1 <= ymin_x[0]:
-    n1 -= 1
+    n1 -= 0.1
     for i in range(len(lista_tákolmány)):
         for j in range(len(y_ok_int)):
             x1 = lista_tákolmány[i]
@@ -154,7 +154,7 @@ for i in P_k_x:
 P_k_x = []
 n1 = starter_y
 while not n1 <= ymin_x[0]:
-    n1 -= 1
+    n1 -= 0.1
     for i in range(len(lista_tákolmány)):
         for j in range(len(y_ok_int)):
             x1 = lista_tákolmány[i]
@@ -170,4 +170,4 @@ for i in P_k_x:
     if sz == x:
         fine_y = i
 
-print('A smallest circle that covers n given points in the plane: C:(x;y) = ','C:(',fine_x,';',fine_y,')',' and r=',round((min(fine_ertekek))**(1/2), 1),sep="")
+print('A smallest circle that covers n given points in the plane: C:(x;y) = ','C:(',round(fine_x, 1),';',round(fine_y, 1),')',' and r=',round((min(fine_ertekek))**(1/2), 1),sep="")
